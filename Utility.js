@@ -2,9 +2,9 @@ var readlineSync = require('readline-sync');
 class userRegistration {
     matchPattern = () => {
         try {
-            let phNo = /^[1-9]{2}\s{0,1}[0-9]{10}$/
-            var userName = readlineSync.question('May I have your ph no?');
-            const pattern = phNo.exec(userName);
+            let password = /^.{8,}$/
+            var userName = readlineSync.question('Enter correct password');
+            const pattern = password.exec(userName);
             if (pattern) {
                 console.log("Matches");
             }
