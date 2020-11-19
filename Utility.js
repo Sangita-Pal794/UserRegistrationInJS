@@ -2,7 +2,7 @@ var readlineSync = require('readline-sync');
 class userRegistration {
     matchPattern = () => {
         try {
-            let password = /^(?=.*[A-Z]).{8,}$/
+            let password = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/
             var userName = readlineSync.question('Enter correct password');
             const pattern = password.exec(userName);
             if (pattern) {
